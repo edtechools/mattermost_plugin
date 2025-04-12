@@ -1,0 +1,33 @@
+{
+    "id": "mattermost.plugin",
+    "name": "mattermost plugin",
+    "description": "辅助插件",
+    "homepage_url": "https://github.com/mattermost/mattermost-plugin-starter-template",
+    "support_url": "https://github.com/mattermost/mattermost-plugin-starter-template/issues",
+    "icon_path": "assets/starter-template-icon.svg",
+    "min_server_version": "6.2.1",
+    "server": {
+        "executables": {
+            "linux-amd64": "server/dist/plugin-linux-amd64",
+            "linux-arm64": "server/dist/plugin-linux-arm64",
+            "darwin-amd64": "server/dist/plugin-darwin-amd64",
+            "darwin-arm64": "server/dist/plugin-darwin-arm64",
+            "windows-amd64": "server/dist/plugin-windows-amd64.exe"
+        }
+    },
+    "webapp": {
+        "bundle_path": "webapp/dist/main.js"
+    },
+    "settings_schema": {
+        "header": "向所有人发送弹幕",
+        "footer": "接口会发生改变",
+        "settings": [ 
+        {
+            "key": "DanmakuUrl",
+            "display_name": "弹幕接口网址",
+            "type": "text",
+            "help_text": "设置弹幕的发送接口",
+            "default": "https://backend.edtools.top/broadcast"
+        }]
+    }
+}
